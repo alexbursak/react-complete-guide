@@ -34,6 +34,14 @@ class App extends Component {
     };
 
     render() {
+        const style = {
+            backgroundColor: '#333',
+            font: 'inherit',
+            border: '1px solid blue',
+            padding: '8px',
+            cursor: 'pointer'
+        };
+
         return (
             <div className="App">
                 <h1>Yo</h1>
@@ -54,7 +62,7 @@ class App extends Component {
                     age={this.state.persons[2].age}
                 />
                 <p>{this.state.counter}</p>
-                {/*<button onClick={this.incCounterHandler}>Switch Names</button>*/}
+                <button style={style} onClick={this.switchNameHandler}>Switch Names</button>
             </div>
         );
     }
