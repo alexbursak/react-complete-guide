@@ -49,33 +49,35 @@ class App extends Component {
             cursor: 'pointer'
         };
 
+        let persons = null;
+        if (this.state.showPersons) {
+            persons = (
+                <div>
+                    <Person
+                        click={this.switchNameHandler.bind(this, 'Alex')}
+                        name={this.state.persons[0].name}
+                        age={this.state.persons[0].age}
+                    />
+                    <Person
+                        click={this.switchNameHandler.bind(this, 'Bob')}
+                        nameChangedHandler={this.nameChangedHandler}
+                        name={this.state.persons[1].name}
+                        age={this.state.persons[1].age}
+                    />
+                    <Person
+                        // click={this.switchNameHandler}
+                        name={this.state.persons[2].name}
+                        age={this.state.persons[2].age}
+                    />
+                </div>
+            );
+        }
+
         return (
             <div className="App">
-                <h1>Yo</h1>
-                {
-                  this.state.showPersons ?
-                <div>
-                  <Person
-                      click={this.switchNameHandler.bind(this, 'Alex')}
-                      name={this.state.persons[0].name}
-                      age={this.state.persons[0].age}
-                  />
-                  <Person
-                      click={this.switchNameHandler.bind(this, 'Bob')}
-                      nameChangedHandler={this.nameChangedHandler}
-                      name={this.state.persons[1].name}
-                      age={this.state.persons[1].age}
-                  />
-                  <Person
-                      // click={this.switchNameHandler}
-                      name={this.state.persons[2].name}
-                      age={this.state.persons[2].age}
-                  />
-                </div>
-                : null
-              }
-                {/*<p>{this.state.counter}</p>*/}
+                <h1>Yo, this is react App.</h1>
                 <button style={style} onClick={this.toggleShowPersonsHandler}>Switch Names</button>
+                { persons }
             </div>
         );
     }
