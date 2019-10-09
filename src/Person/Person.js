@@ -13,7 +13,7 @@ const Person = (props) => {
                 <span style={spanStyle} onClick={props.clickDeleteHandler}>X</span>
             </p>
             <p>{props.children}</p>
-            {/*<input type="text" onChange={props.nameChangedHandler} value={props.name}/>*/}
+            <input type="text" onChange={props.nameChangedHandler} value={props.name}/>
 
         </div>
     );
