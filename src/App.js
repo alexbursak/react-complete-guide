@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -71,21 +71,21 @@ class App extends Component {
             style.backgroundColor = 'red';
         }
 
-        let classes = [];
+        let cInlineClasses = [];
         if (this.state.persons.length <= 2) {
-            classes.push('gray');
+            cInlineClasses.push(classes.gray);
         }
         if (this.state.persons.length <= 1) {
-            classes.push('italic');
+            cInlineClasses.push(classes.italic);
         }
         if (this.state.persons.length === 0) {
-            classes = [];
+            cInlineClasses = [];
         }
 
         return (
-            <div className="App">
+            <div className={classes.App}>
                 <h1>Yo, this is react App.</h1>
-                <p className={classes.join(' ')}>those are my classes</p>
+                <p className={cInlineClasses.join(' ')}>those are my classes</p>
                 <button style={style} onClick={this.toggleShowPersonsHandler}>Toggle Persons</button>
                 { persons }
             </div>

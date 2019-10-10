@@ -1,5 +1,5 @@
 import React from 'react';
-import './Person.css';
+import classes from './Person.css';
 
 const Person = (props) => {
     const spanStyle = {
@@ -9,7 +9,7 @@ const Person = (props) => {
     };
 
     return (
-        <div className="Person" >
+        <div className={classes.Person} >
             <p>I am a {props.name} and I am a {props.age} years old.
                 <span style={spanStyle} onClick={props.clickDeleteHandler}>X</span>
             </p>
