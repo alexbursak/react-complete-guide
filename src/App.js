@@ -82,7 +82,7 @@ class App extends Component {
         }
         if (this.state.persons.length === 0) {
             cInlineClasses = [];
-        }
+        } 
 
         return (
             <div className={classes.App}>
