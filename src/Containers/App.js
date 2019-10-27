@@ -15,6 +15,11 @@ class App extends Component {
         showPersons: false
     };
 
+    static getDerivedStateFromProps(prevProps) {
+        console.log('[App.js] getDerivedStateFromProps', prevProps);
+        return null;
+    }
+
     deletePersonHandler = (index) => {
         let persons = [...this.state.persons];
         persons.splice(index, 1);
