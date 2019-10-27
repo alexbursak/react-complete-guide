@@ -59,6 +59,7 @@ class App extends Component {
         return (
             <div className={classes.App}>
                 <Cockpit
+                    appTitle={this.props.appTitle}
                     personsListLength={this.state.persons.length}
                     showPersons={this.state.showPersons}
                     toggleShowPersonsHandler={this.toggleShowPersonsHandler} />

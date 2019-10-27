@@ -5,6 +5,7 @@ const Cockpit = (props) => {
     const personsListLength = props.personsListLength;
     const showPersons = props.showPersons;
     const toggleShowPersonsHandler = props.toggleShowPersonsHandler;
+    const appTitle = props.appTitle;
 
     let inlineClasses = [];
     if (personsListLength <= 2) {
@@ -24,7 +25,7 @@ const Cockpit = (props) => {
 
     return (
         <div className={classes.Cockpit}>
-            <h1>Yo, this is react App.</h1>
+            <h1>{appTitle}</h1>
             <p className={inlineClasses.join(' ')}>those are my classes</p>
             <button
                 className={btnClass}
