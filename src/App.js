@@ -25,7 +25,7 @@ class App extends Component {
             return person.id === personId;
         });
 
-        // copying the person and assigning new value
+        // copying the person and assigning new value 
         let person = {...this.state.persons[personIndex]};
         person.name = event.target.value;
 
