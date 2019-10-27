@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import classes from './App.css';
-import Person from '../Components/Persons/Person/Person';
+import Persons from "../Components/Persons/Persons";
+import Cockpit from "../Components/Cockpit/Cockpit";
 
 class App extends Component {
 
@@ -43,55 +44,25 @@ class App extends Component {
     };
 
     render() {
-        // const style = {
-        //     backgroundColor: 'green',
-        //     color: 'white',
-        //     font: 'inherit',
-        //     border: '1px solid blue',
-        //     padding: '8px',
-        //     cursor: 'pointer'
-        // };
-
         let persons = null;
-        let btnClass = '';
 
         if (this.state.showPersons) {
             persons = (
-                <div>
-                    {this.state.persons.map((person, index) => {
-                        return <Person
-                            key={person.id}
-                            name={person.name}
-                            age={person.age}
-                            clickDeleteHandler={() => this.deletePersonHandler(index)}
-                            nameChangedHandler={(event) => this.nameChangedHandler(event, person.id)}
-                            />
-                    })}
-                </div>
+                <Persons
+                    persons={this.state.persons}
+                    deletePersonHandler={this.deletePersonHandler}
+                    nameChangedHandler={this.nameChangedHandler}
+                />
             );
-
-            btnClass = classes.Red;
         }
-
-        let cInlineClasses = [];
-        if (this.state.persons.length <= 2) {
-            cInlineClasses.push(classes.gray);
-        }
-        if (this.state.persons.length <= 1) {
-            cInlineClasses.push(classes.italic);
-        }
-        if (this.state.persons.length === 0) {
-            cInlineClasses = [];
-        } 
 
         return (
             <div className={classes.App}>
-                <h1>Yo, this is react App.</h1>
-                <p className={cInlineClasses.join(' ')}>those are my classes</p>
-                <button 
-                    className={btnClass}
-                    onClick={this.toggleShowPersonsHandler}
-                >Toggle Persons</button>
+                <Cockpit
+                    personsListLength={this.state.persons.length}
+                    showPersons={this.state.showPersons}
+                    toggleShowPersonsHandler={this.toggleShowPersonsHandler} />
+
                 { persons }
             </div>
         );
