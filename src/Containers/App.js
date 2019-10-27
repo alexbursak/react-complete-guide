@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import classes from './App.css';
-import Person from './Person/Person';
+import Person from '../Components/Persons/Person/Person';
 
 class App extends Component {
 
@@ -25,7 +25,7 @@ class App extends Component {
             return person.id === personId;
         });
 
-        // copying the person and assigning new value 
+        // copying the person and assigning new value
         let person = {...this.state.persons[personIndex]};
         person.name = event.target.value;
 
