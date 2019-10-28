@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from "./Cockpit.css";
 
 const Cockpit = (props) => {
+
+    // gets triggered when the passed parameter changes.
+    // useEffect(() => {
+    //     alert('[Cockpit.js] useEffect');
+    // }, [props.personsListLength]);
+
+    // alternative to componentDidMount
+    // useEffect(() => {
+    //     alert('[Cockpit.js] useEffect');
+    // }, []);
+
     const personsListLength = props.personsListLength;
     const showPersons = props.showPersons;
     const toggleShowPersonsHandler = props.toggleShowPersonsHandler;
