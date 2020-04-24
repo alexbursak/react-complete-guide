@@ -4,3 +4,10 @@ function based components (by returning a function in useEffect and the function
 do the cleanup)
 useEffect - by passing an empty array as a second arg - the cleanup will run only one when component gets
 destroyed. If not args passed the function will run on every update cycle.
+
+Lesson 98
+React.memo - used to make sure that components updates only when data changed.
+Looks like the component (Cockpit) is still not changing so I assume that this might
+be redundant
+
+
