@@ -32,7 +32,11 @@ Lesson 103
 Lesson 104
 React.Fragment - is build in wrapper component (Auxiliary).
 
+Lesson 105
+Creating HOC with properties - className
 
+Lesson 106
+Creating functional HOC
 
 
 
