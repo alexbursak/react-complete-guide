@@ -1,0 +1,6 @@
+Lesson 95
+Cleanup work can be performed be `componentWillUnmount` for class based components and `useEffect` for
+function based components (by returning a function in useEffect and the function might have login to
+do the cleanup)
+useEffect - by passing an empty array as a second arg - the cleanup will run only one when component gets
+destroyed. If not args passed the function will run on every update cycle.

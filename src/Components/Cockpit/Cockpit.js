@@ -15,6 +15,14 @@ const Cockpit = (props) => {
     //     alert('[Cockpit.js] useEffect');
     // }, []);
 
+    // alternative to componentWillUnmount - cleanup work
+    // by returning a function we can achieve similar effect as componentWillUnmount
+    // useEffect(() => {
+    //     return () => {
+    //         console.log('[Cockpit.js] useEffect - cleanup');
+    //     };
+    // }, []);
+
     const personsListLength = props.personsListLength;
     const showPersons = props.showPersons;
     const toggleShowPersonsHandler = props.toggleShowPersonsHandler;

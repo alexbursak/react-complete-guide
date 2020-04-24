@@ -13,6 +13,7 @@ class Persons extends Component {
         console.log({payload: 'some text'}, prevProps, prevState);
         return {payload: 'some text'};
     }
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log('[Persons.js] componentDidUpdate');
         console.log(prevProps, prevState, snapshot);
@@ -20,6 +21,11 @@ class Persons extends Component {
 
     componentDidMount() {
         console.log('[Persons.js] componentDidMount');
+    }
+
+    // Used to cleanup stuff
+    componentWillUnmount() {
+        console.log("[Persons.js] componentWillUnmount")
     }
 
     render() {
