@@ -41,5 +41,9 @@ Creating functional HOC
 Lesson 107
 Passing props in HOC
 
+Lesson 108
+setState() - is not executed immediately. It gets scheduled and then gets executed.
+If you need to access old state - use function in `setState` <- important
+
 
 
