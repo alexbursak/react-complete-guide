@@ -38,5 +38,8 @@ Creating HOC with properties - className
 Lesson 106
 Creating functional HOC
 
+Lesson 107
+Passing props in HOC
+
 
 
