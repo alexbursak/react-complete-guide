@@ -3,20 +3,21 @@ import Person from "./Person/Person";
 
 class Persons extends Component {
 
+    // used to improve performance
     shouldComponentUpdate(nextProps, nextState, nextContext) {
         console.log('[Persons.js] shouldComponentUpdate');
-        console.log(nextProps, nextState, nextContext);
-        return true;
+        // make sure that persons updates only if persons has been changed.
+        // persons is an array, so make sure we update persons correctly (create a copy)
+        return nextProps.persons !== this.props.persons;
     }
+
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('[Persons.js] getSnapshotBeforeUpdate');
-        console.log({payload: 'some text'}, prevProps, prevState);
         return {payload: 'some text'};
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log('[Persons.js] componentDidUpdate');
-        console.log(prevProps, prevState, snapshot);
     }
 
     componentDidMount() {
