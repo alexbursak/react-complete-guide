@@ -13,4 +13,9 @@ be redundant
 Lesson 99
 Use `React.memo` & `shouldComponentUpdate` wisely. Do not abuse it as it an extra check.
 
+Lesson 100
+PureComponent - used to check if any of the data (props) changed in the class to make sure that component
+re-renders. Similar to have `shouldComponentUpdate` but fir all properties (props). You must extend
+from `PureComponent` instead of `Component`.
+
 
