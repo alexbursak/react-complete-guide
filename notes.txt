@@ -22,4 +22,9 @@ Lesson 101
 render() - does not updates DOM straight away but instead compares virtual DOM to old virtual DOM to see
 if there are any differences and only renders only differences in real DOM.
 
+Lesson 102
+Array can be returned in render(), but make sure you have a unique 'key'.
+Use Auxiliary components to wrap other components and tags around.
+
+
 
