@@ -18,4 +18,8 @@ PureComponent - used to check if any of the data (props) changed in the class to
 re-renders. Similar to have `shouldComponentUpdate` but fir all properties (props). You must extend
 from `PureComponent` instead of `Component`.
 
+Lesson 101
+render() - does not updates DOM straight away but instead compares virtual DOM to old virtual DOM to see
+if there are any differences and only renders only differences in real DOM.
+
 
