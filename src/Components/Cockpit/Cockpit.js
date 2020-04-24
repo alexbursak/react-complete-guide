@@ -3,12 +3,14 @@ import classes from "./Cockpit.css";
 
 const Cockpit = (props) => {
 
-    // gets triggered when the passed parameter changes.
+    // gets triggered when the passed parameter changes. `props.personsListLength`
+    // can have multiple field you depend on.
     // useEffect(() => {
     //     alert('[Cockpit.js] useEffect');
     // }, [props.personsListLength]);
 
     // alternative to componentDidMount
+    // runs only for first time component initialised is empty array passed
     // useEffect(() => {
     //     alert('[Cockpit.js] useEffect');
     // }, []);
