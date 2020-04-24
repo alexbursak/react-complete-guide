@@ -45,5 +45,6 @@ Lesson 108
 setState() - is not executed immediately. It gets scheduled and then gets executed.
 If you need to access old state - use function in `setState` <- important
 
-
+Lesson 109
+prop-types - allows describe types of properties for a component. Good stuff.
 
