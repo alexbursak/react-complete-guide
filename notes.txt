@@ -81,5 +81,11 @@ Lesson 117
 Lesson 118
 - - -
 
+Lesson 119
+Planning steps:
+1. component tree
+2. app structure (data/state)
+3. components vs containers
+It is okay to have different tree in the end.
 
 
