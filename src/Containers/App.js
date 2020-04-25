@@ -15,7 +15,8 @@ class App extends Component {
         ],
         counter: 0,
         showPersons: false,
-        changeCounter: 0
+        changeCounter: 0,
+        auth: false
     };
 
     static getDerivedStateFromProps(prevProps) {
@@ -57,6 +58,10 @@ class App extends Component {
         });
     };
 
+    loginHandler = () => {
+        this.setState({'auth': true})
+    }
+
     render() {
         let persons = null;
 
@@ -66,6 +71,7 @@ class App extends Component {
                     persons={this.state.persons}
                     deletePersonHandler={this.deletePersonHandler}
                     nameChangedHandler={this.nameChangedHandler}
+                    isAuth={this.state.auth}
                 />
             );
         }
@@ -76,7 +82,9 @@ class App extends Component {
                     appTitle={this.props.appTitle}
                     personsListLength={this.state.persons.length}
                     showPersons={this.state.showPersons}
-                    toggleShowPersonsHandler={this.toggleShowPersonsHandler}/>
+                    toggleShowPersonsHandler={this.toggleShowPersonsHandler}
+                    login={this.loginHandler}
+                />
 
                 {persons}
             </Aux>

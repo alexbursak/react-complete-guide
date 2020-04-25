@@ -23,6 +23,7 @@ class Person extends Component {
 
         return (
             <WithClassAux classes={classes.Person} >
+                {this.props.isAuth ? <p>Auth - true</p> : <p>Auth - false</p>}
                 <p>I am a {this.props.name} and I am a {this.props.age} years old.
                     <span style={spanStyle} onClick={this.props.clickDeleteHandler}>X</span>
                 </p>

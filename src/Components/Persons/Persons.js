@@ -8,7 +8,7 @@ class Persons extends Component {
         console.log('[Persons.js] shouldComponentUpdate');
         // make sure that persons updates only if persons has been changed.
         // persons is an array, so make sure we update persons correctly (create a copy)
-        return nextProps.persons !== this.props.persons;
+        return nextProps.persons !== this.props.persons || nextProps.isAuth !== this.props.isAuth;
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
@@ -39,6 +39,7 @@ class Persons extends Component {
                         age={person.age}
                         clickDeleteHandler={() => this.props.deletePersonHandler(index)}
                         nameChangedHandler={(event) => this.props.nameChangedHandler(event, person.id)}
+                        isAuth={this.props.isAuth}
                     />
                 })}
             </div>
