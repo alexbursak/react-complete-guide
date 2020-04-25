@@ -54,4 +54,5 @@ Lesson 110
 2nd way - `this.inputElementRef = React.createRef();` in constructor then
           `ref={this.inputElementRef}` in component and then can be used in componentDidMount (current)
 
-
+Lesson 111
+`ref` for functional components. `const toggleBtnRef = useRef(null);`

@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import classes from "./Cockpit.css";
 
 const Cockpit = (props) => {
+    const toggleBtnRef = useRef(null);
 
     // alternative to componentDidMount
     // runs only for first time component initialised is empty array passed
     useEffect(() => {
         console.log('[Cockpit.js] useEffect - initial');
+        toggleBtnRef.current.click();
     }, []);
 
     // gets triggered when the passed parameter changes. `props.personsListLength`
@@ -50,7 +52,10 @@ const Cockpit = (props) => {
             <p className={inlineClasses.join(' ')}>those are my classes</p>
             <button
                 className={btnClass}
-                onClick={toggleShowPersonsHandler}>Toggle Persons</button>
+                onClick={toggleShowPersonsHandler}
+                ref={toggleBtnRef}>
+                Toggle Persons
+            </button>
         </div>
     );
 };
