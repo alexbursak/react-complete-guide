@@ -1,9 +1,11 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useContext} from 'react';
 import classes from "./Cockpit.css";
 import AuthContext from "../../context/auth-context";
 
 const Cockpit = (props) => {
     const toggleBtnRef = useRef(null);
+    // different (better) way of accessing context
+    const context = useContext(AuthContext);
 
     // alternative to componentDidMount
     // runs only for first time component initialised is empty array passed
@@ -57,12 +59,10 @@ const Cockpit = (props) => {
                 ref={toggleBtnRef}>
                 Toggle Persons
             </button>
-            <AuthContext.Consumer>
-                {(context) => <button
-                    onClick={context.login}>
-                    Log in
-                </button>}
-            </AuthContext.Consumer>
+            <button
+                onClick={context.login}>
+                Log in
+            </button>
         </div>
     );
 };

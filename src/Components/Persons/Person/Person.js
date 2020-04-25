@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
 import AuthContext from "../../../context/auth-context";
 
 class Person extends Component {
+
+    // different (better) way of accessing context
+    static contextType = AuthContext;
+
     constructor(props) {
         super(props);
         this.inputElementRef = React.createRef();
@@ -24,9 +28,7 @@ class Person extends Component {
 
         return (
             <WithClassAux classes={classes.Person}>
-                <AuthContext.Consumer>
-                    {(context) => context.auth ? <p>Auth - true</p> : <p>Auth - false</p>}
-                </AuthContext.Consumer>
+                {this.context.auth ? <p>Auth - true</p> : <p>Auth - false</p>}
                 <p>I am a {this.props.name} and I am a {this.props.age} years old.
                     <span style={spanStyle} onClick={this.props.clickDeleteHandler}>X</span>
                 </p>

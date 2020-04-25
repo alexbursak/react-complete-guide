@@ -66,3 +66,6 @@ A good feature. `React.createContext` - used to create a context component. Look
 "global" variables container, but you can define how "global" it can be.
 Useful when passing a long chain of data trough multiple components.
 
+Lesson 114
+Context - better way of consuming it. A LOT better way...
+
