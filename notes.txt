@@ -88,4 +88,6 @@ Planning steps:
 3. components vs containers
 It is okay to have different tree in the end.
 
+Lesson 120
+App layout planning
 
