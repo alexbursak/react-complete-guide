@@ -89,5 +89,8 @@ Planning steps:
 It is okay to have different tree in the end.
 
 Lesson 120
-App layout planning
+App layout planning.
+
+Lesson 121
+App state planning.
 
