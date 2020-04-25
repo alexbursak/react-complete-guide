@@ -94,3 +94,6 @@ App layout planning.
 Lesson 121
 App state planning.
 
+Lesson 122
+Info about new project create
+
