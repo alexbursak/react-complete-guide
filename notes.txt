@@ -27,7 +27,7 @@ Array can be returned in render(), but make sure you have a unique 'key'.
 Use Auxiliary components to wrap other components and tags around.
 
 Lesson 103
-...
+- - -
 
 Lesson 104
 React.Fragment - is build in wrapper component (Auxiliary).
@@ -68,4 +68,7 @@ Useful when passing a long chain of data trough multiple components.
 
 Lesson 114
 Context - better way of consuming it. A LOT better way...
+
+Lesson 115
+- - -
 
