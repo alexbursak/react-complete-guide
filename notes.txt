@@ -48,3 +48,10 @@ If you need to access old state - use function in `setState` <- important
 Lesson 109
 prop-types - allows describe types of properties for a component. Good stuff.
 
+Lesson 110
+`ref` - an prop that could be passed to a component that allows to access the current element
+1st way - `ref={(inputEl) => {this.inputElement = inputEl}}` then can be used in componentDidMount
+2nd way - `this.inputElementRef = React.createRef();` in constructor then
+          `ref={this.inputElementRef}` in component and then can be used in componentDidMount (current)
+
+
