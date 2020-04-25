@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import classes from './Person.css';
 import WithClassAux from "../../../hoc/WithClassAux";
 import PropTypes from 'prop-types';
+import AuthContext from "../../../context/auth-context";
 
 class Person extends Component {
     constructor(props) {
@@ -22,8 +23,10 @@ class Person extends Component {
         };
 
         return (
-            <WithClassAux classes={classes.Person} >
-                {this.props.isAuth ? <p>Auth - true</p> : <p>Auth - false</p>}
+            <WithClassAux classes={classes.Person}>
+                <AuthContext.Consumer>
+                    {(context) => context.auth ? <p>Auth - true</p> : <p>Auth - false</p>}
+                </AuthContext.Consumer>
                 <p>I am a {this.props.name} and I am a {this.props.age} years old.
                     <span style={spanStyle} onClick={this.props.clickDeleteHandler}>X</span>
                 </p>

@@ -39,7 +39,6 @@ class Persons extends Component {
                         age={person.age}
                         clickDeleteHandler={() => this.props.deletePersonHandler(index)}
                         nameChangedHandler={(event) => this.props.nameChangedHandler(event, person.id)}
-                        isAuth={this.props.isAuth}
                     />
                 })}
             </div>

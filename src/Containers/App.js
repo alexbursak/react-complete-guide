@@ -4,6 +4,7 @@ import Persons from "../Components/Persons/Persons";
 import Cockpit from "../Components/Cockpit/Cockpit";
 import withClassAuxFunction from "../hoc/withClassAuxFunction";
 import Aux from "../hoc/Aux";
+import AuthContext from "../context/auth-context";
 
 class App extends Component {
 
@@ -71,22 +72,22 @@ class App extends Component {
                     persons={this.state.persons}
                     deletePersonHandler={this.deletePersonHandler}
                     nameChangedHandler={this.nameChangedHandler}
-                    isAuth={this.state.auth}
                 />
             );
         }
 
         return (
             <Aux>
-                <Cockpit
-                    appTitle={this.props.appTitle}
-                    personsListLength={this.state.persons.length}
-                    showPersons={this.state.showPersons}
-                    toggleShowPersonsHandler={this.toggleShowPersonsHandler}
-                    login={this.loginHandler}
-                />
+                <AuthContext.Provider value={{auth: this.state.auth, login: this.loginHandler}}>
+                    <Cockpit
+                        appTitle={this.props.appTitle}
+                        personsListLength={this.state.persons.length}
+                        showPersons={this.state.showPersons}
+                        toggleShowPersonsHandler={this.toggleShowPersonsHandler}
+                    />
 
-                {persons}
+                    {persons}
+                </AuthContext.Provider>
             </Aux>
         );
     }

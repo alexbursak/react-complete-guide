@@ -56,3 +56,13 @@ Lesson 110
 
 Lesson 111
 `ref` for functional components. `const toggleBtnRef = useRef(null);`
+
+Lesson 112
+Context intro
+
+Lesson 113
+Context component - allows passing properties from component A to component D skipping B & C.
+A good feature. `React.createContext` - used to create a context component. Looks like something like
+"global" variables container, but you can define how "global" it can be.
+Useful when passing a long chain of data trough multiple components.
+
