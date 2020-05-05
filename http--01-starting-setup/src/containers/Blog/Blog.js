@@ -7,6 +7,7 @@ import './Blog.css';
 // import axios from 'axios';
 // import axios from '../../axios';
 import Posts from "./Posts/Posts";
+import {Route} from 'react-router-dom';
 
 class Blog extends Component {
     render () {
@@ -20,7 +21,8 @@ class Blog extends Component {
                         </ul>
                     </nav>
                 </header>
-                <Posts />
+                {/*<Posts />*/}
+                <Route path="/" exact render={() => <h1>asdasd</h1>}/>
                 {/*<section>*/}
                 {/*    <FullPost id={this.state.selectedPostId} />*/}
                 {/*</section>*/}
