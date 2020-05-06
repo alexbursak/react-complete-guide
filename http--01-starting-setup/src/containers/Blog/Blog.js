@@ -19,7 +19,7 @@ class Blog extends Component {
                                 // activeStyle={{
                                 //     color: 'blue'
                                 // }}
-                            >Home</NavLink></li>
+                            >Posts</NavLink></li>
                             <li><NavLink exact to={{
                                 // pathname: this.props.match.url + '/new-post', - relative
                                 pathname: '/new-post', // - absolute
