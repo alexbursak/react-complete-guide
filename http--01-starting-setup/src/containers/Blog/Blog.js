@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import './Blog.css';
 import Posts from "./Posts/Posts";
 import NewPost from "../../components/NewPost/NewPost";
-import {Route, NavLink} from 'react-router-dom';
+import {Route, NavLink, Switch} from 'react-router-dom';
 import FullPost from "../../components/FullPost/FullPost";
 
 class Blog extends Component {
-    render () {
+    render() {
         return (
             <div className="Blog">
                 <header>
@@ -30,9 +30,11 @@ class Blog extends Component {
                     </nav>
                 </header>
                 {/*<Route path="/" exact render={() => <h1>Home</h1>}/>*/}
-                <Route path="/" exact component={Posts} />
-                <Route path="/new-post" component={NewPost} />
-                <Route path="/:id" exact component={FullPost} />
+                <Route path="/" exact component={Posts}/>
+                <Switch> {/* just an example */}
+                    <Route path="/new-post" component={NewPost}/>
+                    <Route path="/:id" exact component={FullPost}/>
+                </Switch>
             </div>
         );
     }
