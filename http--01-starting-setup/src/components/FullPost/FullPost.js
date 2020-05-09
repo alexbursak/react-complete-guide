@@ -9,8 +9,17 @@ class FullPost extends Component {
     }
 
     componentDidMount() {
-        if (this.props.match.params.id && this.props.match.params.id !== 0) {
-            if (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== this.props.match.params.id)) {
+        this.loadData();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        this.loadData()
+    }
+
+    loadData() {
+        // console.log('[FullPost] loadData()');
+        if (this.props.match.params.id) {
+            if (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id != this.props.match.params.id)) {
                 axios.get('/posts/' + this.props.match.params.id)
                     .then(response => {
                         this.setState({loadedPost: response.data})
