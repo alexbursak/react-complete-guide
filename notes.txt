@@ -132,3 +132,10 @@ read
 
 Lesson 207
 use proper routes (urls)
+
+Lesson 216
+New way of loading component asynchronously (only from React 16.6):
+
+const LazyPosts - React.lazy(() => import('./posts/Posts'));
+<Route path="/posts" render={() => <Suspense fallback={<div>loading...</div>} ><Posts /></Suspense>} >
+Can be assigned to a button too!
